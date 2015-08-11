@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Connections</title>
+  <title>CONNECTIONS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -16,18 +16,17 @@
   <script src="https://s3.amazonaws.com/codiqa-cdn/codiqa.ext.js"></script>
   <script src="theme.css"></script>
   <script src="script.js"></script>
+  
 </head>
 <body>
 <!-- Login Page -->
 <div data-role="page" data-control-title="Login" id="login">
     <div data-theme="a" data-role="header">
-        <span class="ui-title">
-        </span>
+    <h1>CONNECTIONS</h1>
     </div>
     <div role="main" class="ui-content">
-        <div style="width: 288px; height: 200px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;"
-        data-controltype="image">
-            <img src="https://codiqa.com/static/images/v2/image.png" alt="image" style="position: absolute; top: 50%; left: 50%; margin-left: -16px; margin-top: -18px">
+        <div data-controltype="image">
+            <img src="Connections.png" alt="image">
         </div>
         <a href="#signin" class="ui-btn ">
             Login
@@ -38,7 +37,7 @@
 <div data-role="page" data-control-title="Sign In" id="signin">
     <div data-theme="a" data-role="header">
         <h1>
-            Header
+            CONNECTIONS
         </h1>
     </div>
     <div role="main" class="ui-content">
@@ -65,41 +64,32 @@
         </h1>
     </div>
     <div role="main" class="ui-content">
-        <div class="ui-field-contain" data-controltype="searchinput">
-            <input name="Search" id="searchinput1" placeholder="" value="Search" type="search"
-            data-mini="true">
-        </div>
-        <ul data-role="listview" data-divider-theme="a" data-inset="true">
+        <ul data-role="listview" id ="contactList" data-divider-theme="a" data-inset="true" data-filter="true" data-filter-placeholder="Search Contacts List..." data-autodividers="true">
             <li data-theme="a">
-                <a href="" data-transition="slide">
-                    Button
+                <a href="#history" data-transition="slide">
+                    Asia Burell
                 </a>
             </li>
             <li data-theme="a">
-                <a href="#login" data-transition="slide">
-                    Button
+                <a href="#history" data-transition="slide">
+                    Jay Wong
                 </a>
             </li>
             <li data-theme="a">
-                <a href="#login" data-transition="slide">
-                    Button
+                <a href="#history" data-transition="slide">
+                    Tiffany Xiao
                 </a>
             </li>
             <li data-theme="a">
-                <a href="#login" data-transition="slide">
-                    Button
+                <a href="#history" data-transition="slide">
+                    Victoria Tan
                 </a>
             </li>
             <li data-theme="a">
-                <a href="#login" data-transition="slide">
-                    Button
+                <a href="#history" data-transition="slide">
+                    Wilson Chen
                 </a>
-            </li>
-            <li data-theme="a">
-                <a href="#login" data-transition="slide">
-                    Button
-                </a>
-            </li>
+            </li>           
         </ul>
     </div>
     <div data-role="tabbar" data-iconpos="top" data-theme="a">
@@ -155,11 +145,13 @@
             </label>
             <input name="" id="textinput5" placeholder="" value="Optional" type="email">
         </div>
-        <input type="submit" value="Submit">
+		<a href="#home" class="ui-btn " onclick="addContact()">
+            Submit
+        </a>
     </div>
 </div>
 <!-- History -->
-<div data-role="page" data-control-title="History" id="page10">
+<div data-role="page" data-control-title="History" id="history">
     <div data-theme="a" data-role="header">
         <h1 class="ui-title">
             CONNECTIONS
@@ -172,7 +164,7 @@
         </div>
         <hr style="height:3px; background-color:#ccc; border:0; margin-top:12px; margin-bottom:12px;">
         <div data-controltype="textblock">
-            <p>
+            <p id="histname">
                 <b>
                     Name
                 </b>
