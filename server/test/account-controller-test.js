@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿var AccountController = require('../controllers/account.js'),
+=======
+var AccountController = require('../controllers/account.js'),
+>>>>>>> origin/master
     mongoose = require('mongoose'),
     should = require('should'),
     uuid = require('node-uuid'),

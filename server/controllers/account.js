@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿var AccountController = function (userModel, session, mailer) {
+=======
+var AccountController = function (userModel, session, mailer) {
+>>>>>>> origin/master
 
     this.crypto = require('crypto');
     this.uuid = require('node-uuid');

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿var UserMock = function () {
+=======
+var UserMock = function () {
+>>>>>>> origin/master
 
     this.uuid = require('node-uuid');
     this.crypto = require('crypto');
@@ -74,4 +78,8 @@ UserMock.prototype.update = function (conditions, update, callback) {
 };
 
 
+<<<<<<< HEAD
 module.exports = UserMock;
+=======
+module.exports = UserMock;
+>>>>>>> origin/master
