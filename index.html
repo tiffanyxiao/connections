@@ -121,32 +121,16 @@
             CONNECTIONS
         </h1>
     </div>
+    <!-- the content starts here -->
     <div role="main" class="ui-content">
-        <div class="ui-field-contain" data-controltype="camerainput">
-            <label for="camerainput1">
-                Image:
-            </label>
-            <input type="file" name="Profile" id="camerainput1" accept="image/*" capture="camera">
-        </div>
-        <div class="ui-field-contain" data-controltype="textinput">
-            <label for="textinput1">
-                Name:
-            </label>
-            <input name="" id="textinput1" placeholder="" value="Type Contact Name Here"
-            type="text">
-        </div>
-        <div class="ui-field-contain" data-controltype="textinput">
-            <label for="textinput2">
-                Phone:
-            </label>
-            <input name="" id="textinput2" placeholder="" value="Optional" type="tel">
-        </div>
-        <div class="ui-field-contain" data-controltype="textinput">
-            <label for="textinput5">
-                Email:
-            </label>
-            <input name="" id="textinput5" placeholder="" value="Optional" type="email">
-        </div>
+        <h1>Add a contact</h1>
+        <form id="contactform">
+        	<input type="text" placeholder="Name" />
+        	<input type="text" placeholder="Phone"/>
+        	<input type="text" placeholder="Email"/>
+        	<textarea placeholder="Description"></textarea>
+        	<input type="button" class="btn btn-primary" value="Clear Data">
+        </form>	
 		<a href="#home" class="ui-btn " onclick="addContact()">
             Submit
         </a>
