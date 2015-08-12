@@ -65,7 +65,7 @@
             CONNECTIONS
         </h1>
     </div>
-    <div role="main" class="ui-content">
+    <div role="main" class="task-list">
         <ul data-role="listview" id ="contactList" data-divider-theme="a" data-inset="true" data-filter="true" data-filter-placeholder="Search Contacts List..." data-autodividers="true">
             <li data-theme="a">
                 <a href="#history" data-transition="slide">
@@ -124,12 +124,12 @@
     <!-- the content starts here -->
     <div role="main" class="ui-content">
         <h1>Add a contact</h1>
-        <form id="contactform">
+        <form id="contact-form">
         	<input type="text" placeholder="Name" />
         	<input type="text" placeholder="Phone"/>
         	<input type="text" placeholder="Email"/>
         	<textarea placeholder="Description"></textarea>
-        	<input type="button" class="btn btn-primary" value="Clear Data">
+        	<input type="button" class="btn btn-primary" value="Add Task">
         </form>	
 		<a href="#home" class="ui-btn " onclick="addContact()">
             Submit

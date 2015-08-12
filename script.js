@@ -20,6 +20,8 @@ function addContact(){
         contactList.appendChild(newListItem);
 }
 
+
+
 //adding a new History page every time a contact is made
 /*function addHistory(){
 	//place this in paragraph id=histname
