@@ -19,6 +19,7 @@
     
 </head>
 <body>
+<!-- Commented Out Login
 <!-- New Landing Page -->
 <div data-role="page" data-control-title="Landing" id="landing">
 	<div data-role="header" data-theme="c">
@@ -139,6 +140,45 @@
                 </div>
             </div>
 	</div>
+</div>
+-->
+<!-- Login Page -->
+<div data-role="page" data-control-title="Login" id="login">
+    <div data-theme="a" data-role="header">
+    <h1>CONNECTIONS</h1>
+    </div>
+    <div role="main" class="ui-content">
+        <div data-controltype="image">
+            <img src="Connections.png" alt="image">
+        </div>
+        <a href="#signin" class="ui-btn ">
+            Login
+        </a>
+    </div>
+</div>
+<!-- Signin -->
+<div data-role="page" data-control-title="Sign In" id="signin">
+    <div data-theme="a" data-role="header">
+        <h1>
+            CONNECTIONS
+        </h1>
+    </div>
+    <div role="main" class="ui-content">
+        <div style="width: 288px; height: 200px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;"
+        data-controltype="image">
+            <img src="https://codiqa.com/static/images/v2/image.png" alt="image" style="position: absolute; top: 50%; left: 50%; margin-left: -16px; margin-top: -18px">
+        </div>
+        <div class="ui-field-contain" data-controltype="textinput">
+            <input name="" id="textinput10" placeholder="" value="Username" type="text">
+        </div>
+        <div class="ui-field-contain" data-controltype="textinput">
+            <input name="" id="textinput13" placeholder="" value="Password" type="text">
+        </div>
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <a href="#home" class="ui-btn ">
+            Submit
+        </a>
+    </div>
 </div>
 <!-- Home -->
 <div data-role="page" data-control-title="Home" id="home">
