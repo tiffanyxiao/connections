@@ -65,35 +65,11 @@
             CONNECTIONS
         </h1>
     </div>
-    <div role="main" class="task-list">
-        <ul data-role="listview" id ="contactList" data-divider-theme="a" data-inset="true" data-filter="true" data-filter-placeholder="Search Contacts List..." data-autodividers="true">
-            <li data-theme="a">
-                <a href="#history" data-transition="slide">
-                    Asia Burell
-                </a>
-            </li>
-            <li data-theme="a">
-                <a href="#history" data-transition="slide">
-                    Jay Wong
-                </a>
-            </li>
-            <li data-theme="a">
-                <a href="#history" data-transition="slide">
-                    Tiffany Xiao
-                </a>
-            </li>
-            <li data-theme="a">
-                <a href="#history" data-transition="slide">
-                    Victoria Tan
-                </a>
-            </li>
-            <li data-theme="a">
-                <a href="#history" data-transition="slide">
-                    Wilson Chen
-                </a>
-            </li>           
-        </ul>
-    </div>
+	<div class = "contact-list" id="added">
+		<div class="person">
+		<div class="name">Sample Name</div>
+		</div>
+	</div>	
     <div data-role="tabbar" data-iconpos="top" data-theme="a">
         <ul>
             <li>
@@ -129,11 +105,8 @@
         	<input type="text" placeholder="Phone"/>
         	<input type="text" placeholder="Email"/>
         	<textarea placeholder="Description"></textarea>
-        	<input type="button" class="btn btn-primary" value="Add Task">
+        	<input type="button" class="btn btn-primary" value="Add Contact">
         </form>	
-		<a href="#home" class="ui-btn " onclick="addContact()">
-            Submit
-        </a>
     </div>
 </div>
 <!-- History -->
