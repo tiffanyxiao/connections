@@ -1,19 +1,41 @@
-//adding a contact onto the list
+var defaults = {
+// CSS selectors and attributes that would be used by the JavaScript functions
+  contactlist: "contact-list",
+  contactname: "contact-name",
+  contactId: "contact-",
+  formId: "contact-form",
+  dataAttribute: "data",
+  deleteDiv: "delete-div"
+}, codes = {
+  "1" : "#home", 
+};
 
+// Add Task
+var generateElement = function(params) {
+  var parent = $(codes[params.code]),
+      wrapper;
 
-//adding a new History page every time a contact is made
-/*function addHistory(){
-	//place this in paragraph id=histname
-	var histname = document.getElementById('histname');
-    //get the name
-    var name = document.getElementById('textinput1').value	
-		//create a new b element
-		var newPart = document.createElement("b");
-		//create a new name
-		var newName = document.createTextNode(name);
-		//put the name into the b 
-		newPart.appendChild(newName);
-		histname.appendChild(newPart);
-}*/
+  if (!parent) {
+    return;
+  }
 
+  wrapper = $("<div />", {
+    "class" : defaults.contactlist,
+    "id" : defaults.contactId + params.id,
+    "data" : params.id
+  }).appendTo(parent);
 
+  $("<div />", {
+    "class" : defaults.contactname,
+    "text": params.title
+  }).appendTo(wrapper);
+
+};
+
+generateElement({
+  id: "123",
+  code: "1",
+  title: "My Uber Important Task",
+  date: "5/2/2014",
+  description: "I have to do a lot of steps to implement this task!"
+});
