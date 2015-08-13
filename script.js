@@ -27,7 +27,7 @@ function addContact() {
 	newDiv3.setAttribute("class","ui-content");
 	//create another div
 	var newDiv4 = document.createElement("div");
-	newDiv4.setAttribute("data-controltype","textbook");
+	newDiv4.setAttribute("data-controltype","textbox");
 	//create a p , b and textnode with name 
 	var newP = document.createElement("p");
 	var newB = document.createElement("b");
