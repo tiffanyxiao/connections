@@ -242,33 +242,30 @@
         </h1>
     </div>
     <div role="main" class="ui-content">
-        <div style="width: 288px; height: 200px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;"
-        data-controltype="image">
-            <img src="https://codiqa.com/static/images/v2/image.png" alt="image" style="position: absolute; top: 50%; left: 50%; margin-left: -16px; margin-top: -18px">
-        </div>
-        <hr style="height:3px; background-color:#ccc; border:0; margin-top:12px; margin-bottom:12px;">
         <div data-controltype="textblock">
-            <p id="histname">
+            <p>
                 <b>
                     Name
                 </b>
             </p>
-            <p>
-                <b>
-                    Number
-                </b>
-            </p>
-            <p>
-                <b>
-                    Email
-                </b>
-            </p>
-            <p>
-                <b>
-                    Notes
-                </b>
-            </p>
         </div>
+        <div class="ui-field-contain" data-controltype="selectmenu">
+            <label for="selectmenu1">
+                Connection Type:
+            </label>
+            <select id="selectmenu1" name="" data-theme="a">
+                <option value="call">
+                    Call
+                </option>
+                <option value="email">
+                    Email
+                </option>
+                <option value="message">
+                    Message
+                </option>
+            </select>
+        </div>
+        <input type="submit" data-icon="star" data-iconpos="left" value="Submit">
     </div>
 </div>
 <!-- Notes -->
