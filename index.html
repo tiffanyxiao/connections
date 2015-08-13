@@ -235,6 +235,7 @@
     </div>
 </div>
 <!-- History -->
+<!-- change this to connection later-->
 <div data-role="page" data-control-title="History" id="history">
     <div data-theme="a" data-role="header">
         <h1 class="ui-title">
@@ -253,7 +254,7 @@
             <label for="selectmenu1">
                 Connection Type:
             </label>
-            <select id="selectmenu1" name="" data-theme="a">
+            <select id="options" name="" data-theme="a">
                 <option value="call">
                     Call
                 </option>
@@ -265,8 +266,17 @@
                 </option>
             </select>
         </div>
-        <input type="submit" data-icon="star" data-iconpos="left" value="Submit">
-    </div>
+				<input type= "button" value="Submit" data-theme="a" onclick="updateHistory()">  
+        </div>
+        <div role="main" class="ui-content">
+        	<div data-controltype="textblock">
+        		<p>
+        			History
+        			<p id="lines">
+        			</p>
+        		</p>
+        	</div>
+        </div>			
 </div>
 <!-- Notes -->
 <div data-role="page" data-control-title="Notes" id="page6">
