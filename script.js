@@ -1,3 +1,5 @@
+var stamp;
+
 function addContact() {
     var contactList = document.getElementById("contactList");  
     var name = document.getElementById('textinput1').value;
@@ -15,18 +17,31 @@ function addContact() {
         newListItem.appendChild(newLink);
 		//put the list in the unordered list
         contactList.appendChild(newListItem);
+   //new history page     
+        
 }
 
 function updateHistory(){
 var value = document.getElementById("options").value;
+  var now = new Date();
+  var date = [ now.getMonth() + 1, now.getDate(), now.getFullYear() ];
+  var time = [ now.getHours(), now.getMinutes(), now.getSeconds() ];
+  var suffix = ( time[0] < 12 ) ? "AM" : "PM";
+  time[0] = ( time[0] < 12 ) ? time[0] : time[0] - 12;
+  time[0] = time[0] || 12;
+  for ( var i = 1; i < 3; i++ ) {
+    if ( time[i] < 10 ) {
+      time[i] = "0" + time[i];
+    	}
+	}
+var stamp = (date.join("/") + " " + time.join(":") + " " + suffix);
 	if (value == "call") {
 		//find where to put it
 		var history = document.getElementById("lines");
 		//create a new text item
-		var newText = document.createTextNode("Called");
+		var newText = document.createTextNode("Called " + stamp);
 		//create a new p item 
 		var newLine = document.createElement("p");
-		//put the text in the p
 		newLine.appendChild(newText);
 		history.appendChild(newLine);
 	}		
@@ -34,7 +49,7 @@ var value = document.getElementById("options").value;
 		//find where to put it
 		var history = document.getElementById("lines");
 		//create a new text item
-		var newText = document.createTextNode("Emailed");
+		var newText = document.createTextNode("Emailed " + stamp);
 		//create a new p item 
 		var newLine = document.createElement("p");
 		//put the text in the p
@@ -45,11 +60,12 @@ var value = document.getElementById("options").value;
 		//find where to put it
 		var history = document.getElementById("lines");
 		//create a new text item
-		var newText = document.createTextNode("Messaged");
+		var newText = document.createTextNode("Messaged" + stamp);
 		//create a new p item 
 		var newLine = document.createElement("p");
 		//put the text in the p
 		newLine.appendChild(newText);
 		history.appendChild(newLine);
-	}			
+	}		
 }
+
