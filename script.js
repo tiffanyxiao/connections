@@ -60,7 +60,7 @@ var stamp = (date.join("/") + " " + time.join(":") + " " + suffix);
 		//find where to put it
 		var history = document.getElementById("lines");
 		//create a new text item
-		var newText = document.createTextNode("Messaged" + stamp);
+		var newText = document.createTextNode("Messaged " + stamp);
 		//create a new p item 
 		var newLine = document.createElement("p");
 		//put the text in the p
