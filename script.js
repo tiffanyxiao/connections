@@ -1,41 +1,20 @@
-var defaults = {
-// CSS selectors and attributes that would be used by the JavaScript functions
-  contactlist: "contact-list",
-  contactname: "contact-name",
-  contactId: "contact-",
-  formId: "contact-form",
-  dataAttribute: "data",
-  deleteDiv: "delete-div"
-}, codes = {
-  "1" : "#home", 
-};
-
-// Add Task
-var generateElement = function(params) {
-  var parent = $(codes[params.code]),
-      wrapper;
-
-  if (!parent) {
-    return;
-  }
-
-  wrapper = $("<div />", {
-    "class" : defaults.contactlist,
-    "id" : defaults.contactId + params.id,
-    "data" : params.id
-  }).appendTo(parent);
-
-  $("<div />", {
-    "class" : defaults.contactname,
-    "text": params.title
-  }).appendTo(wrapper);
-
-};
-
-generateElement({
-  id: "123",
-  code: "1",
-  title: "My Uber Important Task",
-  date: "5/2/2014",
-  description: "I have to do a lot of steps to implement this task!"
-});
+function addContact(){
++	//find the place of the list
++    var contactList = document.getElementById("contactList");  
++    //get the name
++    var name = document.getElementById('textinput1').value
++    	//create a new list item	
++        var newListItem = document.createElement("li");
++		newListItem.setAttribute("data-theme","a");
++		//create the ahref	
++		var newLink = document.createElement("a");
++		newLink.setAttribute("href","#history");
++		//create the text	
++        var newName = document.createTextNode(name);
++		//put the name in the link
++		newLink.appendChild(newName);
++		//put the link in the list
++        newListItem.appendChild(newLink);
++		//put the list in the unordered list
++        contactList.appendChild(newListItem);
++}
