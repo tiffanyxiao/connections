@@ -1,14 +1,16 @@
 var stamp;
 
 function addContact() {
-//makeNewHistory        
+//makeNewHistory
+    var name = document.getElementById('textinput1').value;   
+    var lastname = document.getElementById('textinput6').value;             
 	//find the body
 	var newpage = document.getElementById("pages");
 	//make a new div
 	var newDiv = document.createElement("div");
 	newDiv.setAttribute("data-role","page");
 	//sets the id to new page
-	newDiv.setAttribute("id","new-page");
+	newDiv.setAttribute("id",name);
 	//create the div2
 	var newDiv2 = document.createElement("div");
 	newDiv2.setAttribute("data-theme","a");
@@ -29,7 +31,7 @@ function addContact() {
 	//create a p , b and textnode with name 
 	var newP = document.createElement("p");
 	var newB = document.createElement("b");
-	var newText = document.createTextNode("Name");
+	var newText = document.createTextNode(name+" "+lastname);
 	//create another div
 	var newDiv5 = document.createElement("div");
 	newDiv5.setAttribute("data-controltype","selectmenu");	
@@ -115,16 +117,15 @@ function addContact() {
 	newpage.appendChild(newDiv);
 //new contact	
     var contactList = document.getElementById("contactList");  
-    var name = document.getElementById('textinput1').value;
     	//create a new list item	
         var newListItem = document.createElement("li");
 		newListItem.setAttribute("data-theme","a");
 		//create the ahref	
 		var newLink = document.createElement("a");
 		//set the link to #new-page
-		newLink.setAttribute("href","#new-page");
+		newLink.setAttribute("href","#"+name);
 		//create the text	
-        var newName = document.createTextNode(name);
+        var newName = document.createTextNode(name+" "+lastname);
 		//put the name in the link
 		newLink.appendChild(newName);
 		//put the link in the list
