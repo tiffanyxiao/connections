@@ -1,8 +1,6 @@
-function addContact(){
-	//find the place of the list
+function addContact() {
     var contactList = document.getElementById("contactList");  
-    //get the name
-    var name = document.getElementById('textinput1').value
+    var name = document.getElementById('textinput1').value;
     	//create a new list item	
         var newListItem = document.createElement("li");
 		newListItem.setAttribute("data-theme","a");
