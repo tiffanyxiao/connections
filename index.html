@@ -18,7 +18,7 @@
   <script src="script.js"></script>
     
 </head>
-<body>
+<body id="pages">
 <!-- New Landing Page -->
 <div data-role="page" data-control-title="Landing" id="landing">
 	<div data-role="header" data-theme="c">
@@ -236,21 +236,22 @@
 </div>
 <!-- History -->
 <!-- change this to connection later-->
+<!--div 1-->
 <div data-role="page" data-control-title="History" id="history">
-    <div data-theme="a" data-role="header">
+    <div data-theme="a" data-role="header"> <!--div2-->
         <h1 class="ui-title">
             CONNECTIONS
         </h1>
     </div>
-    <div role="main" class="ui-content">
+    <div role="main" class="ui-content"> <!--div3-->
         <div data-controltype="textblock">
             <p>
                 <b>
                     Name
                 </b>
             </p>
-        </div>
-        <div class="ui-field-contain" data-controltype="selectmenu">
+        </div> <!--div4-->
+        <div class="ui-field-contain" data-controltype="selectmenu"> <!--div5-->
             <label for="selectmenu1">
                 Connection Type:
             </label>
@@ -268,8 +269,8 @@
         </div>
 				<input type= "button" value="Submit" data-theme="a" onclick="updateHistory()">  
         </div>
-        <div role="main" class="ui-content">
-        	<div data-controltype="textblock">
+        <div role="main" class="ui-content"> <!--div 6-->
+        	<div data-controltype="textblock"> <!--div 7-->
         		<p>
         			History
         			<p id="lines">
